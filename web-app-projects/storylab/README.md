@@ -1,5 +1,14 @@
 # StoryLab for Aether
 
+## A history adventure on Android
+
+The device captures below show a Wikipedia source and a generated historical choice. Paste an article URL, select a topic and continue the adventure. These images demonstrate the actual app flow; they do not independently validate its historical assessment.
+
+<img src="../../docs/screenshots/storylab-source-android.png" width="300" alt="A history adventure on Android">
+
+<img src="../../docs/screenshots/storylab-decision-android.png" width="300" alt="A contextual historical choice in StoryLab">
+
+
 Source-grounded learning adventures, one decision at a time. Add an EPUB, TXT,
 Markdown document, pasted text, or Wikipedia link; choose a topic and start.
 Narrative mode establishes your role, setting, background, goal and stakes before

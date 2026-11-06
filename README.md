@@ -15,6 +15,30 @@ Clone with `git clone --recurse-submodules https://github.com/josephm1/aether-we
 
 Import a project ZIP using Aether → Apps. For StoryLab, from its project directory run `python3 package-aether.py --output /absolute/path/to/new-release`; the package uses the pinned Apps build manager. Projects contain editable source and `web-app.json`. Source and saved app data are separate on device. Updating a source checkout does not automatically replace installed app data.
 
+## Real examples on Android
+
+These captures show the installed apps on a Huion Note E running the Aether hosted
+Android build. They are real device captures, not design mockups. Personal reference
+packs and saved app data are not included in this repository.
+
+### StoryLab: explore a historical decision
+
+Paste the Wikipedia URL for Alexander the Great, select the topic, and continue the
+adventure. The app presents a situation and four decisions in context. Source setup
+and an actual generated decision are shown below; the screenshot demonstrates the
+learning flow, not independent historical verification.
+
+<p><img src="docs/screenshots/storylab-source-android.png" width="280" alt="StoryLab using the Alexander the Great Wikipedia article"><img src="docs/screenshots/storylab-decision-android.png" width="280" alt="StoryLab presents a contextual historical decision with four choices"></p>
+
+### OSCE Practice: choose a study station
+
+Choose a topic from your own references, set the question count and start a fictional
+station. The captured installation has a private reference library and a saved
+hypertension station; those materials are not shipped here. This capture shows
+station setup and resumption, not clinical validation or a newly completed station.
+
+<img src="docs/screenshots/osce-stations-android.png" width="280" alt="OSCE Practice station setup and a saved fictional hypertension station on Android">
+
 ## Source materials and licences
 
 Personal books, saved progress, profiles, credentials, device captures, medical resource packs and reference articles are excluded. Clinical Cases ships an empty topic index: prepare your own lawfully held library using its supplied indexing tools. OSCE Practice starts with an empty reference folder; add your own Markdown under `references/Zero to Finals` and rebuild. Do not commit those materials.

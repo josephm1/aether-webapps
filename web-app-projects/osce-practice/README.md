@@ -1,5 +1,12 @@
 # OSCE Practice for Aether
 
+## Station setup on Android
+
+The device capture below shows station setup and a saved fictional hypertension station. The installed private reference library is not included in this repository. This is a study workflow, not clinical guidance.
+
+<img src="../../docs/screenshots/osce-stations-android.png" width="300" alt="Station setup on Android">
+
+
 Static adaptation of the existing local OSCE Practice project for Mobile Codex.
 It retains its fictional unfolding case, 1–100 open-ended questions (12 default),
 random/blind topics, concise answer feedback, explicit next-question navigation,
