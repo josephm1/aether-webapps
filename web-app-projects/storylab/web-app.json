@@ -1,0 +1,28 @@
+{
+  "format": "aether-web-app",
+  "version": 1,
+  "id": "aether-storylab",
+  "label": "StoryLab",
+  "kind": "web",
+  "pwa": true,
+  "notice": "Source-grounded interactive study. Generated interpretations and answer keys require critical review.",
+  "capabilities": {
+    "ai": true,
+    "storage": true,
+    "networkOrigins": [
+      "https://en.wikipedia.org"
+    ],
+    "tools": []
+  },
+  "build": {
+    "type": "command",
+    "commands": [
+      {
+        "command": "node",
+        "args": [
+          "pwa/build.mjs"
+        ]
+      }
+    ]
+  }
+}

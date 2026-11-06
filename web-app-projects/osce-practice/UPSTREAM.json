@@ -1,0 +1,11 @@
+{
+  "source": "Local OSCE Practice project previously adapted for Mobile Codex",
+  "files": {
+    "core.mjs": "95936c6d67c125cdac30ad62f128aee13576df188024baf377592b872dfddf76",
+    "examiner.md": "db30431932e46623e7b8fc43b76bd258d8241ebfb3728b4d1ededaaad74468ad",
+    "public/app.js": "fd19cdf8f0c7cff11af3ca2bc2465244143ef19b78f3a46ba39d7cc8cd1e7bfe",
+    "public/app.css": "b2ef89acd180e4c24f84063f92429d30abd4a2ec92886f46c102d2fed68859de",
+    "public/index.html": "51bc8cdae444b33a036dcb544470a02327b74b8b4117d24c3a31ea2545e5e598"
+  },
+  "licence": "Original local project has no explicit licence; preserve attribution and do not infer redistribution rights. Reference library remains user-supplied material."
+}

@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/amosblomqvist/learnharness",
+  "revision": "c29c956fce786909a50fe30d5a69eb5adf4ff877",
+  "reason": "Restore missing components/artifacts only; no upgrade to upstream HEAD",
+  "comparison": {
+    "exact_source_file_matches": 554,
+    "differing_source_files": 15,
+    "mobile_branch_only_files": 24,
+    "roots": [
+      "app",
+      "components",
+      "src",
+      "scripts",
+      "tests",
+      "lib"
+    ]
+  },
+  "licence": "AGPL-3.0-only",
+  "files": {
+    "components/artifacts/demo-card.tsx": "12cc1bed243b550c031be142417cf1e5ef8160ffcf33368f6ae8ef7c8b030eda",
+    "components/artifacts/dispatch-card.tsx": "b84130951a08a8f67c2158d26d937e9b7d0dfcab24f15ea8351c9c1c92a44a7b",
+    "components/artifacts/download.ts": "452a0c0d0f0e2fc20a4a877caf25122935eb79cb557e47bd0ec5e7b39d026355",
+    "components/artifacts/index.ts": "b39e39b747dc4233d6876fb6064f365f9cb93810c6aa6fd4229cfdde0cd5499a",
+    "components/artifacts/invert-disc.tsx": "a87203bf8b27ef7de25820997862a4dadced78bb77ab5cc841ac11f9384b0c53",
+    "components/artifacts/job-card.tsx": "9435d8a84823b297ac31e56ccc1bf129354a44bdbd8d2540014e9f09b2379a8d",
+    "components/artifacts/live-tool-card.tsx": "e349d61c1673c066be347b7fbb7b4199fac185aef4fb72d8896001c159acdb07",
+    "components/artifacts/probe-done-card.tsx": "3ce192bae84bd2f9a38a5265dbd8490ec3156bdf487514a66f2a2e48dee5f6f0",
+    "components/artifacts/steer-card.tsx": "3564b9a4a190a9ff9ce9e4860edc1e549f7a36b65c86486e584b1549494728be",
+    "components/artifacts/svg-image.tsx": "fcf29f7329535ef8a52c85a3d9a42a769bd6c6f7a2fe1e9b7e1d4672ecca9624",
+    "components/artifacts/tool-call-card.tsx": "ab604b460258d84317dd57c0b117ae9d9a5c551cc375c40c38ec589565dcc9b6",
+    "components/artifacts/visual-card.tsx": "7e0f1c738868155b10062c808b0ed2424618a04a374dd9192ae89bdbeddd293b"
+  }
+}

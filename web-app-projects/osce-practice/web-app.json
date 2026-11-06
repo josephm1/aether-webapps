@@ -1,0 +1,26 @@
+{
+  "format": "aether-web-app",
+  "version": 1,
+  "id": "aether-osce-practice",
+  "label": "OSCE Practice",
+  "kind": "web",
+  "pwa": true,
+  "notice": "Fictional source-based OSCE practice. AI uses this app\u2019s Aether model/effort setting. Saved references are not live clinical guidance.",
+  "capabilities": {
+    "ai": true,
+    "storage": true,
+    "networkOrigins": [],
+    "tools": []
+  },
+  "build": {
+    "type": "command",
+    "commands": [
+      {
+        "command": "node",
+        "args": [
+          "pwa/build.mjs"
+        ]
+      }
+    ]
+  }
+}

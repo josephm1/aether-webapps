@@ -1,0 +1,33 @@
+{
+  "format": "aether-web-app",
+  "version": 1,
+  "id": "aether-learnharness",
+  "label": "LearnHarness \u00b7 Aether",
+  "notice": "Hosted by Aether. Shared project-folder storage and selected-model access initialize automatically. Background research/demo/visual and compaction parity remain incomplete.",
+  "pwa": true,
+  "kind": "web",
+  "capabilities": {
+    "ai": true,
+    "storage": true,
+    "networkOrigins": [],
+    "tools": []
+  },
+  "build": {
+    "type": "command",
+    "commands": [
+      {
+        "command": "python3",
+        "args": [
+          "--version"
+        ]
+      },
+      {
+        "command": "node",
+        "args": [
+          "pwa/build.mjs"
+        ]
+      }
+    ],
+    "dependencies": "npm-lock"
+  }
+}

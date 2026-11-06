@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {sourceURL,wikipediaTitle,wikiAPI,openLink} from '../pwa/dist/sources.mjs';
+test('pasted links reject executable schemes and embedded credentials',()=>{for(const value of ['javascript:alert(1)','file:///etc/passwd','https://user:secret@example.com','not a link'])assert.throws(()=>sourceURL(value));assert.equal(sourceURL('https://example.org/article').hostname,'example.org');});
+test('Wikipedia article links normalize mobile host, fragments, underscores and encoded titles',()=>{assert.equal(wikipediaTitle('https://en.m.wikipedia.org/wiki/Alexander_the_Great#Early_life'),'Alexander the Great');assert.equal(wikipediaTitle('https://en.wikipedia.org/w/index.php?title=Linear_algebra'),'Linear algebra');assert.equal(wikipediaTitle('https://other.example/article'),null);assert.throws(()=>wikipediaTitle('https://en.wikipedia.org/wiki/Special:Random'));});
+test('Wikipedia section queries stay on the granted JSON API origin',()=>{const url=new URL(wikiAPI({oldid:'123',section:'4',prop:'text'}));assert.equal(url.origin,'https://en.wikipedia.org');assert.equal(url.pathname,'/w/api.php');assert.equal(url.searchParams.get('section'),'4');assert.equal(url.searchParams.get('oldid'),'123');});
+test('ordinary links can be saved without pretending the webpage was read',async()=>{const source=openLink({title:'My article',url:'https://example.org/article'});assert.equal(source.reference,'https://example.org/article');await assert.rejects(()=>source.read(),/saved as a reference/);});

@@ -1,0 +1,36 @@
+name: Check web apps
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  static-apps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.19.0'
+      - run: npm --prefix web-app-projects/storylab test
+      - run: node web-app-projects/osce-practice/pwa/build.mjs
+      - run: node web-app-projects/clinical-cases/pwa/build.mjs
+      - run: python3 web-app-projects/storylab/package-aether.py --output "$RUNNER_TEMP/storylab-release"
+      - run: node web-app-projects/storylab/tests/import-package.mjs "$RUNNER_TEMP/storylab-release/aether-storylab-project.zip"
+  learnharness:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web-app-projects/learnharness
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.19.0'
+          cache: npm
+          cache-dependency-path: web-app-projects/learnharness/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: node pwa/build.mjs

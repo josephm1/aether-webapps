@@ -1,0 +1,3 @@
+[submodule "web-app-projects/apps"]
+	path = web-app-projects/apps
+	url = https://github.com/josephm1/aether-apps.git

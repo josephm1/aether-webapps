@@ -1,0 +1,7 @@
+import {CONFIDENCE_STOPS} from '../../src/core/question-core.ts';
+// Temporary same-tab UI drafts; canonical answers still use the unchanged session format.
+const prefix='lh.question-ui.';
+const key=id=>prefix+encodeURIComponent(location.pathname)+'/'+encodeURIComponent(id);
+export function readQuestionUiDraft(id,input){try{const value=JSON.parse(sessionStorage.getItem(key(id))||'null');if(!value||!Array.isArray(value.selection?.selected)||value.selection.selected.some(i=>!Number.isInteger(i)||i<0||i>=(input?.options?.length||0))||['thinking','other','text'].some(name=>typeof value[name]!=='string'))return undefined;if(value.confidenceIndex!==undefined&&(!Number.isInteger(value.confidenceIndex)||value.confidenceIndex<0||value.confidenceIndex>=CONFIDENCE_STOPS.length))return undefined;return {...value,selection:{...value.selection,selected:new Set(value.selection.selected)}};}catch{return undefined;}}
+export function writeQuestionUiDraft(id,draft){try{const text=JSON.stringify({...draft,selection:{...draft.selection,selected:[...draft.selection.selected]}});if(text.length>32768)return;const keys=Object.keys(sessionStorage).filter(k=>k.startsWith(prefix));while(keys.length>=16&&!keys.includes(key(id)))sessionStorage.removeItem(keys.shift());sessionStorage.setItem(key(id),text);}catch{/* Typing stays usable if temporary browser storage is unavailable. */}}
+export function clearQuestionUiDraft(id){try{sessionStorage.removeItem(key(id));}catch{}}

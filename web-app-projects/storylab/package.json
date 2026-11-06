@@ -1,0 +1,11 @@
+{
+  "name": "aether-storylab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node pwa/build.mjs",
+    "test": "node pwa/build.mjs && node --test tests/*.test.mjs",
+    "dev": "node dev-server.mjs"
+  },
+  "license": "GPL-3.0-only"
+}

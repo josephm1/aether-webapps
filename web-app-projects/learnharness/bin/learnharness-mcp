@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PATH="$HOME/.local/bin:$PATH"
+lh_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$lh_root"
+exec node --import "$lh_root/node_modules/tsx/dist/loader.mjs" "$lh_root/scripts/local-mcp.ts"
